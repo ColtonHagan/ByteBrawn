@@ -11,6 +11,7 @@ import "./index.scss";
  *
  * @param {number} pageCount - The total number of pages (must be an integer).
  * @param {function} changePage - Callback function to handle page changes.
+ * @param {number} currentPage - The current page number (must be an integer).
  */
 const CustomPaginate = ({ pageCount, changePage, currentPage }) => {
   const handlePageChange = (e) => {
@@ -38,6 +39,8 @@ const CustomPaginate = ({ pageCount, changePage, currentPage }) => {
       disabledClassName="pagination__link--disabled"
       activeClassName="pagination__link--active"
       pageClassName="pagination__link"
+      pageRangeDisplayed={3}
+      marginPagesDisplayed={1}
     />
   )
 }
