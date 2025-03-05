@@ -42,7 +42,7 @@ const ExercisePopUp = ({ exercise, isEditing = true, onClose, onSubmit }) => {
     };
 
     const gif = useMemo(() => (
-        isEditing ? exercise?.gif : `https://exercise-gif-api-989b2a8bed95.herokuapp.com/exercises/gif/${exercise.id}`
+        isEditing ? exercise?.gif : `https://exercise-gif-api.onrender.com/exercises/gif/${exercise.id}`
     ), [exercise.id, isEditing]);
 
     const fetchNickname = async (exerciseName) => {

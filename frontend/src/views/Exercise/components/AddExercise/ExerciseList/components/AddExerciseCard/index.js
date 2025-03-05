@@ -15,7 +15,7 @@ import { CapitalizeWords } from '../../../../../../../util/CapitalizeWords';
 const AddExerciseCard = ({ exercise, onClick }) => {
   return (
     <div className='exercise' onClick={onClick}>
-      <img src={`https://exercise-gif-api-989b2a8bed95.herokuapp.com/exercises/gif/${exercise.id}`} alt={exercise.name} loading='lazy' onError={(e) => e.target.src = Logo}/>
+      <img src={`https://exercise-gif-api.onrender.com/exercises/gif/${exercise.id}`} alt={exercise.name} loading='lazy' onError={(e) => e.target.src = Logo}/>
       <Tags bodyPart={exercise.bodyPart} target={exercise.target}/>
       <h1 className='ellipsis'>{CapitalizeWords(exercise.name)}</h1> 
       <button className='add-exercise-button' aria-label={`Add ${exercise.name}`}>
